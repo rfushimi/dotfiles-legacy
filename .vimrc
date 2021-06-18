@@ -28,5 +28,10 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" typos
+:command Q q
+:command W w
+:command Wq wq
+:command WQ wq
 
 :autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
