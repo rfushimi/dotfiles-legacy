@@ -1,0 +1,2 @@
+3.0
+{'neobundle.vim': {'checked_time': 1494580612, 'installed_uri': 'https://github.com/Shougo/neobundle.vim.git', 'installed_path': '/Users/fushimi/.vim/bundle/neobundle.vim', 'revisions': {}, 'updated_time': '1486593803'}, 'vim-fugitive': {'checked_time': 1494580714, 'installed_uri': 'https://github.com/tpope/vim-fugitive.git', 'installed_path': '/Users/fushimi/.vim/bundle/vim-fugitive', 'revisions': {'1494255809': '7ebe5c143dcda62e5a66891322b7cd66470841c4'}, 'updated_time': '1494255809'}}

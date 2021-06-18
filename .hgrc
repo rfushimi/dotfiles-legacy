@@ -1,0 +1,20 @@
+[ui]
+username = fushimi <fushimi@google.com>
+editor = vim
+paginate = never
+
+[alias]
+f = fix -w
+AVAssetExportSessionfiximport = !$HG status --rev p4head --no-status --modified --added -0 | xargs -0 -- Tools/format_imports.py -w
+konmari = !$HG prune $1 && $HG update $1 && $HG cls-setnumber --remove
+top= !$HG rebase -r $1 -d p4head
+
+[trainingwheels]
+prevent-push-dirty=false
+
+[merge-tools]
+filemerge.executable = ~/bin/opendiff-w
+filemerge.args = $local $other -ancestor $base -merge $output
+
+[extdiff]
+cmd.opendiff = fmdiff

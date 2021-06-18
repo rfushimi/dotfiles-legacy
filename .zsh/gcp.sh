@@ -1,0 +1,1 @@
+# export GOOGLE_APPLICATION_CREDENTIALS="/Users/fushimi/Downloads/ken-en-no-naka-0d2531679121.json"

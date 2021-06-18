@@ -1,0 +1,1 @@
+. $HOME/.bagpipe/setup.sh $HOME/.bagpipe $BAGPIPEBOX "corp-ssh-helper --stderrthreshold=INFO %h %p"

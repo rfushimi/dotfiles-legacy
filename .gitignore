@@ -1,0 +1,14 @@
+.clang-format
+.DS_Store
+.*~
+node_module
+.hg_reviews
+blaze-genfiles
+tulsi-includes
+tulsigen-google3
+header_to_target_map.json
+.xccurrentversion
+azimuth.buildConfig.local
+.pyc
+
+*.orig
