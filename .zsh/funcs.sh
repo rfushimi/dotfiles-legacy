@@ -24,10 +24,6 @@ function build {
 	pushd /; Maps; git5 diff --name-only | grep "google3" | sed -e "s/^google3\/googlemac\/iPhone\/Maps\///" | xargs -t -L 1 python Tools/update_build_files.py --header_map_path "Tools/header_to_target_map.json"; popd; popd;
 }
 
-g4d () {
-	cd "/google/src/cloud/fushimi/$*/google3"
-}
-
 function quickExport () {
 	git stash
 	git5 start $1
