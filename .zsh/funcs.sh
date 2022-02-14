@@ -35,18 +35,24 @@ function quickExport () {
 function moveTarget {
   FROM=$1
   TO=$2
-  
+  # needs ggrep (`brew install grep``)
   FROM_TARGET=`echo $FROM | ggrep -oP "(?<=\:).*"`
   FROM_DIR=`echo $FROM | ggrep -oP ".*(?=\:)"`
   TO_TARGET=`echo $TO | ggrep -oP "(?<=\:).*"`
   TO_DIR=`echo $TO | ggrep -oP ".*(?=\:)"`
 
-  find . -name BUILD | xargs sed -i "" s#${FROM}#${TO}#g
-  find . -name "*.m" -or -name "*.h" -or -name "*.mm" | xargs sed -i "" s#${FROM_DIR}/${FROM_TARGET}#${TO_DIR}/${TO_TARGET}#g
-  for FILE in `ls $FROM_DIR | ggrep -P "${FROM_TARGET}(\+[A-z]+)?\.(mm?|h)"`; do
-    echo "Moving ${FILE} from ${FROM_DIR} to ${TO_DIR}"
-    git mv ${FROM_DIR}/${FILE} $TO_DIR
+  for FROM_FILE in `ls $FROM_DIR | ggrep -P "${FROM_TARGET}(\+[A-z]+)?\.(mm?|h)"`; do
+    TO_FILE=`echo $FROM_FILE | sed s#${FROM_TARGET}#${TO_TARGET}#g`
+    echo "Renaming ${FROM_DIR}/${FROM_FILE} to ${TO_DIR}/${TO_FILE}"
+    hg mv ${FROM_DIR}/${FROM_FILE} ${TO_DIR}/${TO_FILE}
   done
+
+  echo "Updating references..."
+  find . -name "*.m" -or -name "*.h" -or -name "*.mm" | xargs sed -i "" s#${FROM_DIR}/${FROM_TARGET}#${TO_DIR}/${TO_TARGET}#g
+  echo "Running hg fix..."
+  hg fix
+  echo "Regenerating BUILD files..."
+  sh googlemac/iPhone/Maps/Tools/update_all_build_files.sh
 }
 
 function moveTargetToDir {

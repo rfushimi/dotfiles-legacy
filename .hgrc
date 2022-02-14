@@ -5,7 +5,8 @@ paginate = never
 
 [alias]
 f = fix -w
-AVAssetExportSessionfiximport = !$HG status --rev p4head --no-status --modified --added -0 | xargs -0 -- Tools/format_imports.py -w
+fiximport = !$HG status --rev p4head --no-status --modified --added -0 | xargs -0 -- Tools/format_imports.py -w
+
 konmari = !$HG prune $1 && $HG update $1 && $HG cls-setnumber --remove
 top= !$HG rebase -r $1 -d p4head
 
@@ -15,6 +16,9 @@ prevent-push-dirty=false
 [merge-tools]
 filemerge.executable = ~/bin/opendiff-w
 filemerge.args = $local $other -ancestor $base -merge $output
+
+# [extensions]
+# fsmonitor =
 
 [extdiff]
 cmd.opendiff = fmdiff

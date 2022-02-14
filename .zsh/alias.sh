@@ -6,7 +6,8 @@ alias updatess="sh /google/src/head/depot/google3/experimental/users/aberry/gmm/
 ## directory alias
 alias Maps="cd /Users/fushimi/dev/iGMM2/google3/googlemac/iPhone/Maps"
 alias cc="code /Users/fushimi/dev/iGMM2/google3/googlemac/iPhone/Maps/maps.code-workspace"
-
+alias Maps2="cd /google/src/cloud/fushimi/remotecitc/google3/googlemac/iPhone/Maps"
+alias gcert="rw hoshimiya.c.googlers.com"
 # alias
 alias la="ls -a"
 alias lf="ls -F"
