@@ -4,8 +4,8 @@
 # ---------------------------------------------------
 
 HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+HISTSIZE=100000
+SAVEHIST=100000
 
 setopt HIST_FIND_NO_DUPS
 setopt share_history
