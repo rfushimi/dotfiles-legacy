@@ -6,4 +6,6 @@ path=(
 	/opt/qemu/bin(N-/)
 	$path
 	$HOMEBREW_DIR/opt/binutils/bin(N-/)
+	~/bin(N-/)
+	~/dotfiles/bin(N-/)
 )
