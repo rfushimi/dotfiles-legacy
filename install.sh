@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Relative path from home directory.
 DOTFILES=dotfiles
 DOTFILES_PATH=~/$DOTFILES_PATH
@@ -32,7 +34,7 @@ fi
 ln -sf $DOTFILE/ssh-config ~/.ssh/config
 
 case "${OSTYPE}" in
-"darwin")
+darwin*)
     # install homebrew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 

@@ -1,10 +1,10 @@
 
 case "${OSTYPE}" in
-"darwin")
+darwin*)
     echo "$DOTFILES/zsh/env/darwin.sh"
     source $DOTFILES/zsh/env/darwin.sh
     ;;
-"linux")
+linux*)
     echo "$DOTFILES/zsh/env/linux.sh"
     source $DOTFILES/zsh/env/linux.sh
     ;;
@@ -25,7 +25,7 @@ else
     if [[ -a $DOTFILES/corp-dotfiles/zsh/hosts/$HOST.sh ]]; then
         source $DOTFILES/corp-dotfiles/zsh/hosts/$HOST.sh
     else
-        source $DOTFILES/zsh/default.sh
+        source $DOTFILES/zsh/hosts/default.sh
     fi
 fi
 

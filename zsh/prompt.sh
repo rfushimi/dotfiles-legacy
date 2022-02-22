@@ -1,4 +1,3 @@
-echo "TERM_COLOR: $TERM_COLOR"
 PROMPT='%F{'$TERM_COLOR'}%m%f[%T] %F{cyan}%~%f $ '
 
 # 色の設定
