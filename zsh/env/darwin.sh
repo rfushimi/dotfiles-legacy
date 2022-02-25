@@ -1,4 +1,4 @@
-echo "darwin"
+echo "Environment: darwin"
 alias ls="ls -G"
 alias ll="ls -laG"
 

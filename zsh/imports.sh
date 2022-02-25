@@ -1,11 +1,9 @@
 
 case "${OSTYPE}" in
 darwin*)
-    echo "$DOTFILES/zsh/env/darwin.sh"
     source $DOTFILES/zsh/env/darwin.sh
     ;;
 linux*)
-    echo "$DOTFILES/zsh/env/linux.sh"
     source $DOTFILES/zsh/env/linux.sh
     ;;
 esac
