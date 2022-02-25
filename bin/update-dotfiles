@@ -4,7 +4,7 @@ echo "Updating dotfiles..."
 cd "$(dirname "$0")"
 cd ..
 git add .
-git commit -a -m "Update via $HOST"
+git commit -a -m "Update by `update-dotfiles`"
 git pull origin --rebase
 git push --set-upstream origin main
 
