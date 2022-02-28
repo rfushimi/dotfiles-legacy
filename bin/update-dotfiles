@@ -1,10 +1,11 @@
 #!/bin/sh
 
 echo "Updating dotfiles..."
+echo "$(dirname "$0")"
 cd "$(dirname "$0")"
 cd ..
 git add .
-git commit -a -m "Update by `update-dotfiles`"
+git commit -a -m "Update by 'update-dotfiles'"
 git pull origin --rebase
 git push --set-upstream origin main
 
