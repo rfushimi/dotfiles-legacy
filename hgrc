@@ -19,3 +19,6 @@ filemerge.args = $local $other -ancestor $base -merge $output
 
 [extdiff]
 cmd.opendiff = fmdiff
+
+[extensions]
+purge = 

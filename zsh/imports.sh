@@ -27,7 +27,7 @@ else
     fi
 fi
 
-if [[ $HOST =~ "google.com$" ]] then
+if [[ $USER =~ "fushimi" ]] then
   for file in $DOTFILES/corp-dotfiles/zsh/*.sh; do
     source "$file"
   done
