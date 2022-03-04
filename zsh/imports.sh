@@ -19,12 +19,6 @@ esac
 
 if [[ -a $DOTFILES/zsh/hosts/$HOST.sh ]]; then
     source $DOTFILES/zsh/hosts/$HOST.sh
-else
-    if [[ -a $DOTFILES/corp-dotfiles/zsh/hosts/$HOST.sh ]]; then
-        source $DOTFILES/corp-dotfiles/zsh/hosts/$HOST.sh
-    else
-        source $DOTFILES/zsh/hosts/default.sh
-    fi
 fi
 
 if [[ $USER =~ "fushimi" ]] then
