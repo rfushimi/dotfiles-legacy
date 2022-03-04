@@ -26,5 +26,3 @@ if [[ $USER =~ "fushimi" ]] then
     source "$file"
   done
 fi
-
-
