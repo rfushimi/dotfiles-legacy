@@ -24,8 +24,6 @@ if read -q "choice?Install dotfiles? [y/n]:\n"; then
     ln -sf $DOTFILES/zshrc .zshrc
     ln -sf $DOTFILES/gitconfig .gitconfig
     ln -sf $DOTFILES/gitignore .gitignore
-    ln -sf $DOTFILES/hgrc .hgrc
-    ln -sf $DOTFILES/hgignore .hgignore
 
     # SSH - be careful.
     mkdir -p ~/.ssh
