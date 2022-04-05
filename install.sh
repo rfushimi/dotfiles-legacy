@@ -4,8 +4,8 @@
 
 if read -q "choice?Install dotfiles? [y/n]:\n"; then
     # Relative path from home directory.
-    DOTFILES=dotfiles
-    DOTFILES_PATH=~/$DOTFILES_PATH
+    export DOTFILES=dotfiles
+    export DOTFILES_PATH=~/$DOTFILES_PATH
 
     cd ~
     if [[ ! -d $DOTFILES ]] then
@@ -20,6 +20,7 @@ if read -q "choice?Install dotfiles? [y/n]:\n"; then
             git submodule add sso://user/$USER/corp-dotfiles $DOTFILES/corp-dotfiles
             git submodule update --init --recursive
         fi
+        zsh $DOTFILES/corp-dotfiles/install.sh
     fi
 
     # Link
@@ -40,8 +41,6 @@ source ~/.zshrc > /dev/null
 
 case "${OSTYPE}" in
 darwin*)
-    zsh $DOTFILES/corp-dotfiles/install.sh
-
     if read -q "choice?Install HomeBrew? [y/n]:\n"; then
         echo $choice2
         # Install homebrew - use at your own risk.
