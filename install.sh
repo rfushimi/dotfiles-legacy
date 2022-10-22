@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+# curl https://raw.githubusercontent.com/rfushimi/dotfiles/main/install.sh | bash
+
 if read -q "choice?Install dotfiles? [y/n]:\n"; then
     # Relative path from home directory.
     DOTFILES=dotfiles
