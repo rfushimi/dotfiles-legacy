@@ -9,7 +9,7 @@
 .ssh
 *.orig
 id_rsa*
-node_module
+node_modules
 
 # Clang
 .clang-format
