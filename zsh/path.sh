@@ -1,5 +1,5 @@
 
-path+=("$HOME/dotfiles/bin")
-path+=("$HOMEBREW_DIR/bin")
-path+=("$HOME/bin")
-path+=("/opt/qemu/bin")
+PATH="$HOME/dotfiles/bin:$PATH"
+PATH="$HOME/bin:$PATH"
+PATH="/opt/qemu/bin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"

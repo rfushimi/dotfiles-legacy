@@ -1,2 +1,5 @@
 Include ~/dotfiles/ssh/*
 Include ~/dotfiles/corp-dotfiles/ssh/*
+
+Host ozora.c.googlers.com
+  HostName ozora.c.googlers.com

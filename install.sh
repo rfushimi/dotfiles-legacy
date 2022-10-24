@@ -33,10 +33,10 @@ if read -q "choice?Install dotfiles? [y/n]:\n"; then
     if [[ ! -L .ssh/config ]] then
         cp ~/.ssh/config ~/.ssh/config.orig
     fi
+    ln -sf $DOTFILE/ssh-config ~/.ssh/config
     echo "Successfully installed dotfiles."
 fi
 
-ln -sf $DOTFILE/ssh-config ~/.ssh/config
 source ~/.zshrc > /dev/null
 
 case "${OSTYPE}" in

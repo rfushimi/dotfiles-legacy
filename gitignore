@@ -18,7 +18,7 @@ node_modules
 blaze-genfiles
 tulsi-includes
 tulsigen-google3
-header_to_target_map.json
+# header_to_target_map.json
 .xccurrentversion
-azimuth.buildConfig.local
+# azimuth.buildConfig.local
 

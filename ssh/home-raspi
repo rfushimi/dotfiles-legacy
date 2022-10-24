@@ -3,4 +3,3 @@ Host raspberrypi.local
   HostName raspberrypi.local
   User pi
   IdentityFile ~/.ssh/id_rsa
-
