@@ -1,0 +1,18 @@
+
+# Local machines
+
+Host bbb
+  HostName 10.0.0.12
+  User debian
+  IdentityFile ~/.ssh/bbb_id_rsa
+
+Host ubuntu
+  HostName 10.0.0.100
+  User ryohei
+  IdentityFile ~/.ssh/id_rsa
+
+Host raspberrypi.local
+  HostName raspberrypi.local
+  User pi
+  IdentityFile ~/.ssh/id_rsa
+

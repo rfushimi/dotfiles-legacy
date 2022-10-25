@@ -1,6 +1,0 @@
-
-Host bbb
-  HostName 10.0.0.12
-  User debian
-  IdentityFile ~/.ssh/bbb_id_rsa
-
