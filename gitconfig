@@ -18,3 +18,5 @@
 
 [color]
 	ui = auto
+[merge]
+	tool = opendiff
