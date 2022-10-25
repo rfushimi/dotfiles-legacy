@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [[ -a ~/dotfiles/corp-dotfiles/bin/update-dotfiles ]]; then
+    ~/dotfiles/corp-dotfiles/bin/update-dotfiles
+fi
+
 echo "Updating dotfiles..."
 echo "$(dirname "$0")"
 cd "$(dirname "$0")"
@@ -8,7 +12,3 @@ git add .
 git commit -a -m "Update by 'update-dotfiles'"
 git pull origin --rebase
 git push --set-upstream origin main
-
-if [[ -a ~/dotfiles/corp-dotfiles/bin/update-dotfiles ]]; then
-    ~/dotfiles/corp-dotfiles/bin/update-dotfiles
-fi
