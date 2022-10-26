@@ -7,7 +7,12 @@ Host bbb
   IdentityFile ~/.ssh/bbb_id_rsa
 
 Host ubuntu
-  HostName 10.0.0.100
+  HostName aonr.de
+  User ryohei
+  IdentityFile ~/.ssh/id_rsa
+
+Host ubuntu-local
+  HostName aonr.de
   User ryohei
   IdentityFile ~/.ssh/id_rsa
 
