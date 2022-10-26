@@ -10,5 +10,5 @@ cd "$(dirname "$0")"
 cd ..
 git add .
 git commit -a -m "Update by 'update-dotfiles'"
-git pull origin --rebase
+git pull origin
 git push --set-upstream origin main
