@@ -14,10 +14,17 @@ Host ubuntu
 Host ubuntu-local
   HostName aonr.de
   User ryohei
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/id_ed25519
+
+Host ubuntu-sudo
+  HostName 127.0.0.1
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+  ProxyJump ubuntu
 
 Host raspberrypi.local
   HostName raspberrypi.local
   User pi
   IdentityFile ~/.ssh/id_rsa
+
 
