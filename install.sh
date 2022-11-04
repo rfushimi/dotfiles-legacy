@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # curl https://raw.githubusercontent.com/rfushimi/dotfiles/main/install.sh | bash
 

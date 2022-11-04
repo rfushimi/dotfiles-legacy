@@ -23,4 +23,7 @@ Host raspberrypi.local
   User pi
   IdentityFile ~/.ssh/id_rsa
 
-
+Host nas
+  Hostname 10.0.0.187
+  User ryohei
+  Port 20022
