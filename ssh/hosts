@@ -1,15 +1,11 @@
 
 # Local machines
 
-Host bbb
-  HostName 10.0.0.12
-  User debian
-  IdentityFile ~/.ssh/bbb_id_rsa
-
 Host ubuntu
   HostName aonr.de
   User ryohei
-  IdentityFile ~/.ssh/id_rsa
+  Port 20022
+  IdentityFile ~/.ssh/id_ed25519
 
 Host ubuntu-local
   HostName aonr.de

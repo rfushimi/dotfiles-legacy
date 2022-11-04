@@ -21,8 +21,10 @@ if [[ -a $DOTFILES/zsh/hosts/$HOST.sh ]]; then
     source $DOTFILES/zsh/hosts/$HOST.sh
 fi
 
-if [[ $USER =~ "fushimi" ]] then
+if [ $USER = "fushimi" ]; then
   for file in $DOTFILES/corp-dotfiles/zsh/*.sh; do
+    [ -e "$file" ] || continue
     source "$file"
   done
 fi
+
