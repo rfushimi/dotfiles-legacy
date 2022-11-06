@@ -52,3 +52,5 @@ bash*)
     }
     ;;
 esac
+
+# echo -ne '\033]1337;SetColors=bg=000\a' # to black
