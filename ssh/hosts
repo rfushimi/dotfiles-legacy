@@ -2,14 +2,15 @@
 # Local machines
 
 Host ubuntu
-  HostName aonr.de
+  HostName 10.0.0.100
   User ryohei
   Port 20022
   IdentityFile ~/.ssh/id_ed25519
 
-Host ubuntu-local
+Host ubuntu-remote
   HostName aonr.de
   User ryohei
+  Port 20023
   IdentityFile ~/.ssh/id_ed25519
 
 Host ubuntu-sudo
@@ -24,6 +25,8 @@ Host raspberrypi.local
   IdentityFile ~/.ssh/id_rsa
 
 Host nas
-  Hostname 10.0.0.187
+  Hostname 10.0.0.11
   User ryohei
   Port 20022
+  IdentityFile ~/.ssh/id_ed25519
+  ProxyJump ubuntu
