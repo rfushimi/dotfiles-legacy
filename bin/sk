@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+import argparse
+
+import usb
+
+QUERY = dict(
+  idVendor=0x1050,
+  idProduct=0x0200,
+  port_number=1,
+)
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("action", choices=["attach", "detach"])
+    return parser.parse_args()
+
+def main(args):
+    devs = list(usb.core.find(**QUERY, find_all=True))
+    if len(devs) == 0:
+        raise RuntimeError(f"Unable to find device matching {QUERY}")
+    if len(devs) > 1:
+        for dev in devs:
+            print(dev.port_number)
+        raise RuntimeError(f"Found {len(devs)} devices matching {QUERY}")
+    dev = devs[0]
+    if args.action == "detach":
+        dev.detach_kernel_driver(0)
+    elif args.action == "attach":
+        dev.attach_kernel_driver(0)
+    else:
+        raise ValueError(f"Invalid action {args.action}")
+
+if __name__ == "__main__":
+    main(parse_args())
+
