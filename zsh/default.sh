@@ -19,7 +19,7 @@ zsh*)
 
     setopt auto_cd
     setopt correct
-    cdpath=(.. ~ ~/dev)
+    cdpath=(.. ~ ~/dev ~/dev/experimental/google3/experimental/users/fushimi)
     ;;
 bash*)
     # assume Bash
