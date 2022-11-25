@@ -17,8 +17,8 @@ case `uname -m` in
     ;;
 esac
 
-if [[ -a $DOTFILES/zsh/hosts/$HOST.sh ]]; then
-    source $DOTFILES/zsh/hosts/$HOST.sh
+if [[ -a $DOTFILES/zsh/hosts/${HOST%.local}.sh ]]; then
+    source $DOTFILES/zsh/hosts/${HOST%.local}.sh
 fi
 
 if [ $USER = "fushimi" ]; then
