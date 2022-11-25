@@ -2,7 +2,7 @@
 # Local machines
 
 Host ubuntu
-  HostName 10.0.0.100
+  HostName 10.0.2.100
   User ryohei
   Port 20022
   IdentityFile ~/.ssh/id_ed25519
@@ -10,7 +10,7 @@ Host ubuntu
 Host ubuntu-remote
   HostName aonr.de
   User ryohei
-  Port 20023
+  Port 20022
   IdentityFile ~/.ssh/id_ed25519
 
 Host ubuntu-sudo
