@@ -1,23 +1,17 @@
-
 # Local machines
 
 Host ubuntu
-  HostName 10.0.2.100
-  User ryohei
-  Port 20022
-  IdentityFile ~/.ssh/id_ed25519
-
-Host ubuntu-remote
   HostName aonr.de
   User ryohei
-  Port 20022
   IdentityFile ~/.ssh/id_ed25519
+  Port 20022
 
 Host ubuntu-sudo
   HostName 127.0.0.1
   User root
   IdentityFile ~/.ssh/id_ed25519
   ProxyJump ubuntu
+  Port 20022
 
 Host raspberrypi.local
   HostName raspberrypi.local
@@ -30,3 +24,4 @@ Host nas
   Port 20022
   IdentityFile ~/.ssh/id_ed25519
   ProxyJump ubuntu
+
