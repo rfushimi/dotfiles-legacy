@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+GITHUB_USERNAME=rfushimi
+
+
+read -n1 -p "ok? (y/N): " yn
+if [[ $yn = [yY] ]]; then
+  echo hello
+else
+  exit 1;
+fi
+
+wget https://github.com/$GITHUB_USERNAME.keys -O ~/.ssh/authorized_keys
+chmod 400 ~/.ssh/authorized_keys
