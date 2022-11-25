@@ -25,7 +25,7 @@ if read -q "choice?Install dotfiles? [y/n]:\n"; then
 
     # Link
     ln -sf $DOTFILES/zshrc .zshrc
-    ln -sf $DOTFILES/bashrc .bashrc
+    ln -sf $DOTFILES/bash_aliases .bash_aliases
     # ln -sf $DOTFILES/bash_profile .bash_profile
     # ln -sf $DOTFILES/profile .profile
     ln -sf $DOTFILES/gitconfig .gitconfig
