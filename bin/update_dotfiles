@@ -11,4 +11,4 @@ cd ..
 git add .
 git commit -a -m "Update by 'update_dotfiles'"
 git pull origin main
-git push --set-upstream origin main
+git push origin main
