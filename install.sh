@@ -12,11 +12,12 @@ if read -q "choice?Install dotfiles? [y/n]:\n"; then
         git clone https://github.com/rfushimi/dotfiles.git $DOTFILES
     fi
 
-    # My corp $USER is "fushimi" ("ryohei" for private machines)
+    # If $USER is "fushimi" I'm on corp machine
     if [[ $USER = "fushimi" ]] then
         if [ ! -d $DOTFILES/corp-dotfiles ]; then
             echo "Setting up corp machine."
             gcert
+            # Not visible from ouside of corp
             git submodule add sso://user/$USER/corp-dotfiles $DOTFILES/corp-dotfiles
             git submodule update --init --recursive
         fi
@@ -67,14 +68,11 @@ darwin*)
             # media
             brew install obs xquartz
             # apps
-            brew install steam epic-games bitwarden kindle notion slack spotify
+            brew install bitwarden kindle notion slack
         fi
 
         # Optional apps
-        brew install adobe-creative-cloud
-        brew install coteditor
-        brew install google-cloud-sdk
-        brew install google-japanese-ime
+        brew install adobe-creative-cloud coteditor google-cloud-sdk google-japanese-ime
     fi
     
     ;;
