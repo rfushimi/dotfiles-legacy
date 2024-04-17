@@ -1,2 +1,12 @@
 Include ~/dotfiles/ssh/*
 Include ~/dotfiles/corp-dotfiles/ssh/*
+
+Host aonr.de
+  HostName aonr.de
+  User ryohei
+
+
+Host nyc
+  HostName 71e97.tplinkdns.com
+  User root
+  Port 22022

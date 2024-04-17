@@ -29,13 +29,13 @@ bash*)
         history -a
         history -c
         history -r
+        
     }
 
     PROMPT_COMMAND='share_history'
     shopt -u histappend
     export HISTSIZE=2000
 
-    alias -s {md,markdown,txt}='vim'
     shopt -s autocd
 
     _suffix_vim=(md markdown txt text tex cc c C cxx h hh java py rb sh)

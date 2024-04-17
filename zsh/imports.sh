@@ -27,3 +27,5 @@ if [ $USER = "fushimi" ]; then
     source "$file"
   done
 fi
+
+source /opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh
