@@ -46,6 +46,18 @@
 	</dict>
 	<dict>
 		<key>phrase</key>
+		<string>5167799533</string>
+		<key>shortcut</key>
+		<string>でんわ</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string>9296335643</string>
+		<key>shortcut</key>
+		<string>でんわ</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
 		<string>fushimi.ryohei@gmail.com</string>
 		<key>shortcut</key>
 		<string>めーる</string>
@@ -67,6 +79,24 @@
 		<string>206507896</string>
 		<key>shortcut</key>
 		<string>じゃる</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string>研エンの仲</string>
+		<key>shortcut</key>
+		<string>けんえんのなか</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string>研エン</string>
+		<key>shortcut</key>
+		<string>けんえん</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string>71 East 97th St</string>
+		<key>shortcut</key>
+		<string>じゅうしょ</string>
 	</dict>
 </array>
 </plist>

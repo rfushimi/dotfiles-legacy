@@ -1,5 +1,5 @@
 
-Host raspberrypi.local
-  HostName raspberrypi.local
-  User pi
+Host pi
+  HostName 16a-raspi.local
+  User ryohei
   IdentityFile ~/.ssh/id_rsa
