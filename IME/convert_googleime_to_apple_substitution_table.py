@@ -1,7 +1,6 @@
 # Convert GoogleInputs.txt (Google Japanese Input dictionary) to Apple Japanese Text Substitutions plist.
 
 import plistlib
-
 def convert_to_plist(input_file, output_file):
     """Converts a Google Japanese Input dictionary to Apple Text Substitutions plist.
 
