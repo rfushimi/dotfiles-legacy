@@ -17,5 +17,6 @@ class LLMClientGemini:
   def generate(self, system, input):
     print(input)
     response = self.client.generate_content(self.SYSTEM_PROMPT_SELF + self.SYSTEM_PROMPT_INST + self.SYSTEM_PROMPT_EXTRA + "\n\n" + input)
+    response.resolve()
     print(response)
     return response.text
