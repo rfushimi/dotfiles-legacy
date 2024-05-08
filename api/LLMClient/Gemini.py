@@ -1,5 +1,6 @@
-import anthropic
+
 import sys
+import google.generativeai as genai
 
 class LLMClientClaude:
   SYSTEM_PROMPT_SELF = "User is senior software engineer whose ESL speaker working for Google."
@@ -8,12 +9,13 @@ class LLMClientClaude:
 
   def __init__(self):
     # Read API key from file
-    with open('/Users/ryohei/keys/claude.key', 'r') as file:
+    with open('/Users/ryohei/keys/gemini.key', 'r') as file:
       api_key = file.read().rstrip('\n')
     self.api_key = api_key
     self.client = anthropic.Anthropic(api_key=self.api_key)
   
   def generate(self, system, input):
+    print(input)
     message = self.client.messages.create(
       model="claude-3-sonnet-20240229",
       max_tokens=1000,
@@ -25,5 +27,6 @@ class LLMClientClaude:
         }
       ]
     )
+    print(message.content)
     return message.content[0].text
   
