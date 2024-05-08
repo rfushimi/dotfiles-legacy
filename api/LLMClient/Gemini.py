@@ -2,7 +2,7 @@
 import sys
 import google.generativeai as genai
 
-class LLMClientClaude:
+class LLMClientGemini:
   SYSTEM_PROMPT_SELF = "User is senior software engineer whose ESL speaker working for Google."
   SYSTEM_PROMPT_INST = "Make the following sentences in English natural and idiomatic, or translate if necessary. "
   SYSTEM_PROMPT_EXTRA = "It will be used for internal technical discussion, so it’s expected to be more concise, to-the-point, instead of being polite or lengthy."
@@ -11,22 +11,11 @@ class LLMClientClaude:
     # Read API key from file
     with open('/Users/ryohei/keys/gemini.key', 'r') as file:
       api_key = file.read().rstrip('\n')
-    self.api_key = api_key
-    self.client = anthropic.Anthropic(api_key=self.api_key)
+    genai.configure(api_key=api_key)
+    self.client = genai.GenerativeModel('gemini-pro')
   
   def generate(self, system, input):
     print(input)
-    message = self.client.messages.create(
-      model="claude-3-sonnet-20240229",
-      max_tokens=1000,
-      system=system,
-      messages=[
-        {
-          "role": "user",
-          "content": input
-        }
-      ]
-    )
-    print(message.content)
-    return message.content[0].text
-  
+    response = self.client.generate_content(self.SYSTEM_PROMPT_SELF + self.SYSTEM_PROMPT_INST + self.SYSTEM_PROMPT_EXTRA + "\n\n" + input)
+    print(response)
+    return response.text
