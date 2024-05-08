@@ -14,7 +14,6 @@ class LLMClient:
     self.client = anthropic.Anthropic(api_key=self.api_key)
   
   def generate(self, system, input):
-    print(input)
     message = self.client.messages.create(
       model="claude-3-sonnet-20240229",
       max_tokens=1000,
@@ -26,6 +25,5 @@ class LLMClient:
         }
       ]
     )
-    print(message.content)
     return message.content[0].text
   

@@ -8,11 +8,10 @@ import LLMClient.LLMClient as LLMClient
 llm_client = LLMClient.LLMClient()
 data = sys.stdin.read()
 
-print(data)
-print("\n")
 
 system_prompt = llm_client.SYSTEM_PROMPT_SELF + llm_client.SYSTEM_PROMPT_INST + llm_client.SYSTEM_PROMPT_EXTRA
 result = llm_client.generate(system = system_prompt, input = data)
 
 # Print the generated sonnet
+print(data)
 print(result)
