@@ -15,6 +15,6 @@ git push origin main
 
 case "${OSTYPE}" in
 darwin*)
-    rsync -a $DOTFILES/services/ $HOME/Library/Services/
-    ;;
+  rsync -a ~/dotfiles/services/ $HOME/Library/Services/
+  ;;
 esac
