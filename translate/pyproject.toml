@@ -5,7 +5,10 @@ description = "Add your description here"
 authors = [
     { name = "Ryohei Fushimi", email = "rfushimi@users.noreply.github.com" }
 ]
-dependencies = []
+dependencies = [
+    "anthropic>=0.28.0",
+    "google-generativeai>=0.6.0",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 
@@ -22,3 +25,6 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/translate"]
+
+[tool.rye.scripts]
+translate = { cmd = ["fastapi", "dev"], env-file = ".env" }
