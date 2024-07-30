@@ -98,5 +98,11 @@
 		<key>shortcut</key>
 		<string>じゅうしょ</string>
 	</dict>
+	<dict>
+		<key>phrase</key>
+		<string>164376011</string>
+		<key>shortcut</key>
+		<string>KTN</string>
+	</dict>
 </array>
 </plist>
