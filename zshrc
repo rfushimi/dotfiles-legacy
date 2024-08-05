@@ -20,3 +20,6 @@ done
 # unset __conda_setup
 # # <<< conda initialize <<<
 
+
+# Setup go/hi #!>>HI<<!#
+source /etc/bash.bashrc.d/shell_history_forwarder.sh #!>>HI<<!#
