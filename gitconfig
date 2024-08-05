@@ -18,12 +18,13 @@
 [color]
 	ui = auto
 
-# [merge]
-# 	tool = opendiff
-
 [credential]
-	credentialStore = keychain
-	helper = /usr/local/bin/git-credential-manager
+  [includeIf "gitdir:/usr/local/google/home/fushimi/dotfiles"]
+    credentialStore = keychain
+    helper = /usr/local/bin/git-credential-manager
+  [includeIf "gitdir:/usr/local/google/home/fushimi/dotfiles"]
+    credentialStore = keychain
+    helper = /usr/local/bin/git-credential-manager
 
 [credential "https://dev.azure.com"]
 	useHttpPath = true
