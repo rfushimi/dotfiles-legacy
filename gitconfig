@@ -22,11 +22,8 @@
 # 	tool = opendiff
 
 [credential]
-	credentialStore = plaintext
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager-core
+	credentialStore = keychain
+	helper = /usr/local/bin/git-credential-manager
 
 [credential "https://dev.azure.com"]
 	useHttpPath = true
