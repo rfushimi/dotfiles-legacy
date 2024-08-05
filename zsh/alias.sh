@@ -11,3 +11,5 @@ alias ud="update_dotfiles"
 alias reload="pwd > ~/.zshrc_pwd; source ~/.zshrc; cd \`cat ~/.zshrc_pwd\`"
 
 alias w="npx wrangler"
+
+alias update_dotfiles = update_dotfiles
