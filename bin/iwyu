@@ -1,6 +1,0 @@
-files=$(hg status --no-status --change .)
-/Users/fushimi/.vscode/extensions/google.nextcode-*/bin/clang-tidy/bin/clang-tidy -header-filter=".*" --checks="-*,google3-build-objective-c-iwyu" -fix-errors $files
-gsed -i 's|/Users/fushimi/dev/iGMM/google3/||g' $files
-gsed -i 's|/Volumes/google/src/files/[0-9]+/depot/google3/||g' $files
-hg fiximport
-pre_build
