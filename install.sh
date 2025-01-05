@@ -2,6 +2,28 @@
 
 # curl https://raw.githubusercontent.com/rfushimi/dotfiles/main/install.sh | zsh
 
+# SSHキーの存在確認と生成
+if [ ! -f ~/.ssh/id_ed25519 ]; then
+    echo "SSHキーが見つかりません。新しいキーを生成します。"
+    ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+    echo "新しいSSHキーが生成されました。"
+    # GitHubの公開鍵登録ページを開く
+    echo "GitHubの公開鍵登録ページを開きます。"
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        open "https://github.com/settings/ssh/new"
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        xdg-open "https://github.com/settings/ssh/new"
+    else
+        echo "ブラウザを開けません。以下のURLにアクセスしてください："
+        echo "https://github.com/settings/ssh/new"
+    fi
+
+    echo "公開鍵をGitHubに登録してください。"
+    cat ~/.ssh/id_ed25519.pub
+else
+    echo "既存のSSHキーが見つかりました。"
+fi
+
 if read -q "choice?Install dotfiles? [y/n]:\n"; then
     # Relative path from home directory.
     export DOTFILES=dotfiles
@@ -9,7 +31,7 @@ if read -q "choice?Install dotfiles? [y/n]:\n"; then
 
     cd ~
     if [[ ! -d $DOTFILES ]] then
-        git clone https://github.com/rfushimi/dotfiles.git $DOTFILES
+        git clone git@github.com:rfushimi/dotfiles.git $DOTFILES
     fi
 
     # If $USER is "fushimi" I'm on corp machine
@@ -64,7 +86,7 @@ darwin*)
         else
             # non-corp dev
             brew install visual-studio-code
-            brew install docker docker-compose
+            brew install vlc
             # media
             brew install obs xquartz
             # apps
