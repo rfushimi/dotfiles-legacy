@@ -31,7 +31,11 @@ if read -q "choice?Install dotfiles? [y/n]:\n"; then
 
     cd ~
     if [[ ! -d $DOTFILES ]] then
-        git clone git@github.com:rfushimi/dotfiles.git $DOTFILES
+        echo "Cloning dotfiles repository..."
+        if ! git clone git@github.com:rfushimi/dotfiles.git "$DOTFILES"; then
+            echo "Failed to clone dotfiles repository. Please check your internet connection and Git setup."
+            return 1
+        fi
     fi
 
     # If $USER is "fushimi" I'm on corp machine
