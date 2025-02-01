@@ -1,2 +1,2 @@
 TERM_COLOR=yellow
-source ~/.venv/main/bin/activate
+source ~/.uv/bin/activate
