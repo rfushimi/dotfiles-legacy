@@ -1,0 +1,32 @@
+Include ~/corp-dotfiles/ssh/config
+
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 500
+    ControlMaster auto
+    ControlPath ~/.ssh/master-%r@%h-%p
+    ControlPersist 15h
+
+Host source.developers.google.com
+    IdentityFile ~/.ssh/id_ed25519
+
+Host = main edit
+    Hostname fushimi.c.googlers.com
+    RemoteCommand shpool attach -f %k
+    RequestTTY yes
+  
+Host proxmox
+    User root
+    HostName 100.82.129.76
+    IdentityFile ~/.ssh/akey
+
+Host mac-studio
+    User ryohei
+    HostName 100.97.195.68
+    IdentityFile ~/.ssh/akey
+
+# Router configuration
+Host router
+     HostName 192.168.1.11
+     User admin
+     Port 22

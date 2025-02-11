@@ -1,0 +1,22 @@
+
+# Mac
+.DS_Store
+.*~
+.hg_reviews
+
+# General
+.pyc
+.ssh
+*.orig
+id_rsa*
+node_modules
+
+# Clang
+.clang-format
+
+# Corp
+blaze-genfiles
+tulsi-includes
+tulsigen-google3
+# header_to_target_map.json
+.xccurrentversion

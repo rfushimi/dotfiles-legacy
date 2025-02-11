@@ -1,0 +1,11 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.username "fushimi" }}
+
+# Install corp-dotfiles on corp machines
+if [ ! -d "$HOME/corp-dotfiles" ]; then
+  git clone sso://user/$USER/corp-dotfiles $HOME/corp-dotfiles
+  ln -s $HOME/corp-dotfiles ~/.local/share/chezmoi/corp-dotfiles
+fi
+
+{{ end }}

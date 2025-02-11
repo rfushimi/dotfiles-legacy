@@ -1,0 +1,45 @@
+{{ if eq .chezmoi.os "windows" -}}
+# Chocolateyがインストールされていることを確認
+if (!(Get-Command choco -ErrorAction SilentlyContinue)) {
+    Write-Error "Chocolateyがインストールされていません"
+    exit 1
+}
+
+# 基本的な開発ツール
+Write-Output "開発ツールをインストールしています..."
+choco install -y git
+choco install -y vscode
+choco install -y python
+choco install -y nodejs-lts
+choco install -y golang
+
+# 開発環境
+choco install -y wsl2
+
+# エディタとIDE
+choco install -y vim
+
+# ブラウザ
+Write-Output "ブラウザをインストールしています..."
+choco install -y googlechrome
+
+# ユーティリティ
+Write-Output "ユーティリティツールをインストールしています..."
+choco install -y 7zip
+choco install -y powertoys
+choco install -y everything
+choco install -y autohotkey
+choco install -y sharex
+
+# コミュニケーションツール
+Write-Output "コミュニケーションツールをインストールしています..."
+choco install -y discord
+choco install -y notion
+choco install -y bitwarden
+choco install -y bitwarden-cli
+
+Write-Output "全てのパッケージのインストールが完了しました"
+
+# パスを更新
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+{{ end -}}

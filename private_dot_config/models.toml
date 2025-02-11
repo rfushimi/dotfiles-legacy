@@ -1,0 +1,6 @@
+[models]
+# Main model for general tasks
+main = "gemini-2.0-flash-exp"
+
+# Model for thinking/analysis tasks
+thinking = "thinking"
